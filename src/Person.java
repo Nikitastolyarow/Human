@@ -19,11 +19,11 @@ public class Person {
     }
 
     public boolean hasAge() {
-            return age >= 0;
+        return age >= 0;
     }
 
     public boolean hasAddress() {
-            return adress != null;
+        return adress != null;
     }
 
     public String getName() {
@@ -35,7 +35,7 @@ public class Person {
     }
 
     public OptionalInt getAge() {
-            return OptionalInt.of(age);
+        return OptionalInt.of(age);
     }
 
     public String getAddress() {
@@ -43,12 +43,12 @@ public class Person {
     }
 
     public void setAddress(String address) {
-            this.adress = address;
+        this.adress = address;
     }
 
     public void happyBirthday() {
-           if(hasAge())
-               age++;
+        if (hasAge())
+            age++;
     }
 
     public PersonBuilder newChildBuilder() {
@@ -69,7 +69,7 @@ public class Person {
         if (this == obj) return true;
         if (obj == null || getClass() != obj.getClass()) return false;
         Person person = (Person) obj;
-        return age == person.age && name.equals(person.name) && surname.equals(person.surname)&&
+        return age == person.age && name.equals(person.name) && surname.equals(person.surname) &&
                 Objects.equals(adress, person.adress);
     }
 
